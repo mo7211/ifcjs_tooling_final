@@ -1,30 +1,8 @@
-//implent class: project with name and link
+import { projects } from "./projects.js";
 
 let viewerUrl = "./model-viewer.html";
 
 let activeProject;
-
-let projects = [ {
-    'name' : 'Project 1',
-    'link' : 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/01/',
-	},
-	{
-    'name' : 'Project 2',
-    'link' : 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/02/',
-	},
-	{
-    'name' : 'Project 3 ',
-    'link' : 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/03/',
-	},
-	{
-    'name' : 'Project 4',
-    'link' : 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/04/',
-    },
-    {
-    'name' : 'Project 5',
-    'link' : 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/05/',
-    }
-];
 
 //Project list
 
@@ -46,24 +24,10 @@ function createCard(project) {
     button.classList.add("button");
     
     let url = viewerUrl;
-    url = url + "?"+ project.name;
-    
-    //   url.searchParams.set("name", project.name)
- //   let url = encodeQuery({url: viewerUrl, params: project.name});
+    url = url + "?"+ project.id;
+
     button.href = url;
     button.textContent = "View Model";
-
-
-    // button.addEventListener("click", () => {
-    //     let query = new URLSearchParams(activeProject.name);
-
-    //     let url = viewerUrl + query.toString();
-    //     console.log(url);
-
-    //     window.location.href = url;
-    //      //global.localStorage.setItem("activeProject", project);
-    // })
-
 
     const card = document.createElement("div");
     card.classList.add("card");

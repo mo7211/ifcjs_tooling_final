@@ -2,11 +2,29 @@
   "name": "ifcjs",
   "version": "1.0.0",
   "description": "",
-  "main": "script-viewer.js",
+  "main": "script.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mo7211/ifcjs_tooling_final.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mo7211/ifcjs_tooling_final/issues"
+  },
+  "homepage": "https://github.com/mo7211/ifcjs_tooling_final#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.75.7"
+  },
+  "dependencies": {
+    "web-ifc-viewer": "^1.0.202"
+  }
 }
